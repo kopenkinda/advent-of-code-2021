@@ -12,7 +12,7 @@ for el in data:
 days = 256
 
 for _ in range(days+1):
-  if _ == days - 1:
+  if _ == days:
     counter = 0
     for index in storage:
       counter += storage[index]
