@@ -21,6 +21,20 @@ def first_incorrect_closing(line):
       return char
   return None
 
+def step1():
+  result = 0
+  for line in lines:
+    char = first_incorrect_closing(line)
+    if char is not None:
+      if char == ')':
+        result += 3
+      if char == ']':
+        result += 57
+      if char == '}':
+        result += 1197
+      if char == '>':
+        result += 25137
+  print(result)
 
 def complete_line(line):
   opened = []
@@ -48,22 +62,6 @@ def complete_line(line):
     elif char == '<':
       closed.append('>')
   return closed
-
-def step1():
-  result = 0
-  for line in lines:
-    char = first_incorrect_closing(line)
-    if char is not None:
-      if char == ')':
-        result += 3
-      if char == ']':
-        result += 57
-      if char == '}':
-        result += 1197
-      if char == '>':
-        result += 25137
-  print(result)
-
 
 def step2():
   scores = []
