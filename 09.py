@@ -89,6 +89,7 @@ def step2():
   basins = sorted(list(map(lambda x: len(x), basins)))
   three_highest = basins[-3:]
   counter = 1
+  print(three_highest)
   for i in three_highest:
     counter *= i
   print(counter)
