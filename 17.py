@@ -70,8 +70,7 @@ pts = find_passing_through(x, y)
 
 
 def step1():
-    highest_y = find_highest_y(pts)
-    print(highest_y)
+    print(find_highest_y(pts))
 
 
 def step2():
